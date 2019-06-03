@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     binding.pry
     if session[:name]
       redirect_to '/'
-    elsif !params[:name]
+    elsif params[:name].empty?
       redirect_to '/login'
     else
       session[:name] = params[:name]
