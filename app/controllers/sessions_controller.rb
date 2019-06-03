@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    binding.pry
     if session[:name]
       redirect_to '/'
     elsif params[:name].blank?
